@@ -10,7 +10,7 @@ var Twit = require('twit');
 var T = new Twit(require('./config.js'));
 
 // This is the URL of a search for the latest tweets on the #hashtag.
-var hastagSearch = { q: "#hashtag", count: 10, result_type: "recent" };
+var hastagSearch = { q: "#CecilBot", count: 10, result_type: "recent" };
 
 // A user stream
 var stream = T.stream('user');
@@ -100,4 +100,4 @@ function tweeted(err, reply) {
 retweetLatest();
 // ...and then every hour after that. Time here is in milliseconds, so
 // 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60
-setInterval(retweetLatest, 1000 * 60 * 12);
+setInterval(retweetLatest, 1000 * 60 * 1);
